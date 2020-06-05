@@ -16,19 +16,21 @@
     nodemon server.js
     Server is running on port: 5000
 
-| Users API ||
+| Users API  | |
+| ------------- | ------------- |
 | GET  | /users     |
 | POST | /users/add |
 
-| Exercises API ||
+| Exercises API  | |
+| ------------- | ------------- |
 | GET    | /exercises     |
 | POST   | /exercises/add |
 | GET    | /exercises/:id |
 | DELETE | /exercises/:id |
 | POST   | /exercises/update/:id |
 
-![Alt text](mern-tracker-sample/screenshot/createUser.png?raw=true "Create User")
+![Alt text](screenshot/createUser.png?raw=true "Create User")
 
-![Alt text](mern-tracker-sample/screenshot/createLog.png?raw=true "Create Exercise Log")
+![Alt text](screenshot/createLog.png?raw=true "Create Exercise Log")
 
-![Alt text](mern-tracker-sample/screenshot/exercises.png?raw=true "Logged Exercises")
+![Alt text](screenshot/exercises.png?raw=true "Logged Exercises")
