@@ -1,16 +1,10 @@
 const router = require('express').Router();
-let User = require('../models/user.model');
+const usersController = require('../controllers/users');
 
-router.route('/').get((req, res) => {
-	User.find().then((users) => res.json(users)).catch((err) => res.status(400).json('Error: ' + err));
-});
+/* user routes */
 
-router.route('/add').post((req, res) => {
-	const username = req.body.username;
+router.get('/', usersController.readUser);
 
-	const newUser = new User({ username });
-
-	newUser.save().then(() => res.json('User added!')).catch((err) => res.status(400).json('Error: ' + err));
-});
+router.post('/add', usersController.addUser);
 
 module.exports = router;
