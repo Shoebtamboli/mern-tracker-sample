@@ -24,7 +24,7 @@ export default class CreateExercise extends Component {
 
   componentDidMount() {
     axios
-      .get("https://mern-track-sample.herokuapp.com/users/")
+      .get(`${process.env.URL}/users/`)
       .then((response) => {
         if (response.data.length > 0) {
           this.setState({
@@ -75,7 +75,7 @@ export default class CreateExercise extends Component {
     console.log(exercise);
 
     axios
-      .post("https://mern-track-sample.herokuapp.com/exercises/add", exercise)
+      .post(`${process.env.URL}/exercises/add`, exercise)
       .then((res) => console.log(res.data));
 
     window.location = "/";
