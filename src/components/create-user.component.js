@@ -29,7 +29,7 @@ export default class CreateUser extends Component {
     console.log(user);
 
     axios
-      .post(`${process.env.URL}/users/add`, user)
+      .post(`${process.env.BACKEND_URL}/users/add`, user)
       .then((res) => console.log(res.data));
 
     this.setState({
